@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Kavindu Dilshan — QA Automation Engineer & aspiring SDET. AI-augmented test automation across API, UI, mobile and cloud. FinTech QA." />
+<meta name="author" content="Kavindu Dilshan" />
+<title>Kavindu Dilshan · AI-Augmented QA Engineer</title>
+
+<!-- Open Graph (for nice link previews when you share it) -->
+<meta property="og:title" content="Kavindu Dilshan — AI-Augmented QA Engineer" />
+<meta property="og:description" content="Building Quality from Code to Cloud. Playwright · Rest Assured · Appium · JMeter · Claude." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070b16'/><text x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%2338bdf8'>KD</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Three.js as an ES module via CDN — no build step required -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- 3D animated background -->
+<canvas id="bg"></canvas>
+<div class="bg-overlay"></div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav__logo">KD<span>.</span></a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="game.html">Bug Hunt 🐛</a>
+    <a href="#contact" class="nav__cta">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__inner reveal">
+      <p class="hero__eyebrow">Hi, I'm</p>
+      <h1 class="hero__name">Kavindu Dilshan</h1>
+      <h2 class="hero__role">
+        <span class="typed" id="typed"></span><span class="caret">|</span>
+      </h2>
+      <p class="hero__tag">
+        Building <strong>Quality from Code to Cloud</strong> — AI-augmented test automation
+        across API, UI, mobile &amp; performance, with a security-first mindset in FinTech.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="resume.pdf" class="btn btn--ghost" download>⤓ Download CV</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+      <div class="hero__meta">
+        <span>📍 Colombo, Sri Lanka</span>
+        <span>·</span>
+        <span>SQA Automation Intern @ Epic Lanka</span>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span class="scroll-hint__mouse"></span>
+      <span class="scroll-hint__text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <span class="section__index">01</span>
+      <h2 class="section__title">About Me</h2>
+    </div>
+    <div class="about reveal">
+      <div class="about__text">
+        <p>
+          I'm a <strong>Software Engineering undergraduate</strong> and QA Automation Intern working in
+          FinTech, focused on <strong>AI-augmented test automation</strong> — building frameworks that
+          don't just run tests, but <em>generate, self-heal, and triage</em> them.
+        </p>
+        <p>
+          I've designed automation frameworks across the full stack — API (Rest Assured, JMeter),
+          UI &amp; cross-browser (Playwright, Cypress), and mobile (Appium) — several integrating
+          Claude for autonomous test generation, self-healing locators, and AI failure analysis.
+          I care about clean framework architecture, CI/CD, and provable quality through
+          evidence-rich reporting.
+        </p>
+        <p>
+          As QA shifts into the AI era, I'm investing in the part that's becoming <em>more</em>
+          valuable: framework design, AI orchestration, and validating what the AI produces —
+          not just writing scripts.
+        </p>
+      </div>
+      <aside class="about__facts">
+        <div class="fact"><span class="fact__num">8+</span><span class="fact__label">Automation frameworks built</span></div>
+        <div class="fact"><span class="fact__num">5</span><span class="fact__label">Testing layers covered</span></div>
+        <div class="fact"><span class="fact__num">AI</span><span class="fact__label">Augmented workflows</span></div>
+        <div class="fact"><span class="fact__num">FinTech</span><span class="fact__label">Domain focus</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section__head reveal">
+      <span class="section__index">02</span>
+      <h2 class="section__title">Skills &amp; Tooling</h2>
+    </div>
+    <div class="skills">
+      <article class="skill-card reveal">
+        <h3>Test Automation</h3>
+        <ul class="chips">
+          <li>Playwright</li><li>Selenium</li><li>Cypress</li><li>Rest Assured</li>
+          <li>Appium</li><li>TestNG</li><li>JUnit</li><li>Cucumber (BDD)</li>
+        </ul>
+      </article>
+      <article class="skill-card reveal">
+        <h3>API &amp; Performance</h3>
+        <ul class="chips">
+          <li>API Testing</li><li>Postman</li><li>JMeter</li><li>Load Testing</li>
+          <li>JSON Schema</li><li>Contract Testing</li>
+        </ul>
+      </article>
+      <article class="skill-card reveal">
+        <h3>Languages</h3>
+        <ul class="chips">
+          <li>Java</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML/CSS</li>
+        </ul>
+      </article>
+      <article class="skill-card reveal">
+        <h3>CI/CD &amp; DevOps</h3>
+        <ul class="chips">
+          <li>GitHub Actions</li><li>GitLab</li><li>Docker</li><li>Maven</li><li>Git</li>
+        </ul>
+      </article>
+      <article class="skill-card reveal">
+        <h3>AI-Augmented QA</h3>
+        <ul class="chips">
+          <li>Claude API</li><li>LLM Integration</li><li>Applitools Visual AI</li>
+          <li>Prompt Engineering</li><li>Self-Healing Tests</li>
+        </ul>
+      </article>
+      <article class="skill-card reveal">
+        <h3>Backend</h3>
+        <ul class="chips">
+          <li>Spring Boot</li><li>Spring Security</li><li>REST APIs</li>
+          <li>Microservices</li><li>Hibernate/JPA</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section__head reveal">
+      <span class="section__index">03</span>
+      <h2 class="section__title">Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-meta">
+            <h3>Software QA Automation Intern</h3>
+            <span class="tl-org">Epic Lanka · Battaramulla</span>
+            <span class="tl-date">Dec 2025 – Present</span>
+          </div>
+          <ul>
+            <li>Automating end-to-end FinTech flows (fund transfers, OTP, bill payments) with <strong>Playwright + Cucumber (BDD)</strong>.</li>
+            <li>Building <strong>Rest Assured / TestNG</strong> API suites with data-driven, contract &amp; negative paths.</li>
+            <li>Designing <strong>JMeter</strong> performance tests (load / stress / soak) wired into CI gates.</li>
+            <li>Applying <strong>AI-augmented workflows (Claude Code)</strong> for test generation, self-healing &amp; failure triage.</li>
+            <li>Owning the full QA lifecycle — planning, strategy mind-maps, and defect management.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section__head reveal">
+      <span class="section__index">04</span>
+      <h2 class="section__title">Featured Projects</h2>
+    </div>
+    <div class="projects" id="projectsGrid">
+
+      <a class="card tilt reveal" href="project.html?id=ai-visual">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">AI · Visual</span>
+          <h3>AI Visual Testing Framework</h3>
+          <p>Playwright + Applitools Visual AI + Claude Vision. Surfaces only meaningful UI diffs, then auto-classifies each failure as regression, bug, or flake — with Allure + PDF reporting.</p>
+          <ul class="chips chips--sm">
+            <li>TypeScript</li><li>Playwright</li><li>Applitools</li><li>Claude</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=api-rest-assured">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">API</span>
+          <h3>API Test Automation Framework</h3>
+          <p>18 end-to-end Rest Assured + TestNG tests covering auth, CRUD, security &amp; contract paths. Self-healing with transient retry and auto token refresh; Extent + branded PDF reports.</p>
+          <ul class="chips chips--sm">
+            <li>Java 17</li><li>Rest Assured</li><li>TestNG</li><li>GitHub Actions</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=cross-browser">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">Cross-Browser · AI</span>
+          <h3>Cross-Browser Testing + AI</h3>
+          <p>One browser-agnostic spec running on Chrome, Edge, Firefox &amp; Safari in parallel. Autonomous agents generate, self-verify &amp; self-heal specs; PDF report with a consistency matrix.</p>
+          <ul class="chips chips--sm">
+            <li>Playwright</li><li>WebKit</li><li>Claude Opus</li><li>CI</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=jmeter-perf">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">Performance</span>
+          <h3>API Performance Testing (JMeter)</h3>
+          <p>A single parameterized JMeter plan driving load, stress, soak &amp; baseline profiles. AI-assisted analysis reads the JTL and returns a PASS/FAIL verdict with root-cause notes.</p>
+          <ul class="chips chips--sm">
+            <li>JMeter</li><li>PowerShell</li><li>Node.js</li><li>Claude Code</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=appium-mobile">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">Mobile · Security</span>
+          <h3>Mobile QA Framework (Appium)</h3>
+          <p>BDD automation for a FinTech wallet across Android &amp; iOS — login, transfers, OTP &amp; biometrics. PAN/CVV/OTP/JWT masked before any log; PCI-DSS traceability via tags.</p>
+          <ul class="chips chips--sm">
+            <li>Java 17</li><li>Appium 2</li><li>Cucumber</li><li>PCI-DSS</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=cypress">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">Component · E2E</span>
+          <h3>Cypress Component + E2E</h3>
+          <p>19 isolated React component tests + 46 E2E tests against a live site. A multi-agent workflow adversarially reviews each spec against the live DOM before saving.</p>
+          <ul class="chips chips--sm">
+            <li>React</li><li>Cypress 13</li><li>Vite</li><li>Mochawesome</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=spring-backend">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">Backend</span>
+          <h3>Spring Boot E-Commerce Backend</h3>
+          <p>Production-ready backend: JWT auth, role-based access, cart/checkout/order APIs, Stripe payments and cloud-ready, environment-based config.</p>
+          <ul class="chips chips--sm">
+            <li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>Stripe</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+      <a class="card tilt reveal" href="project.html?id=patient-microservices">
+        <div class="card__glow"></div>
+        <div class="card__body">
+          <span class="card__badge">Microservices</span>
+          <h3>Patient Management System</h3>
+          <p>HealthTech microservices backend — Patient, Billing, Analytics &amp; Auth services with gRPC inter-service comms, Kafka event streaming and JWT-secured APIs behind a gateway.</p>
+          <ul class="chips chips--sm">
+            <li>Spring Boot</li><li>gRPC</li><li>Kafka</li><li>Docker</li>
+          </ul>
+          <span class="card__link">View details →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTS -->
+  <section class="section" id="education">
+    <div class="section__head reveal">
+      <span class="section__index">05</span>
+      <h2 class="section__title">Education &amp; Certifications</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-col reveal">
+        <h3 class="edu-col__title">Education</h3>
+        <ul class="edu-list">
+          <li><strong>BSc (Hons) Software Engineering</strong><span>Birmingham City University · 2025–2026</span></li>
+          <li><strong>Higher National Diploma, Software Engineering</strong><span>Skills &amp; Education Group Awards · 2024–2025</span></li>
+          <li><strong>Diploma, Software Engineering</strong><span>Skills &amp; Education Group Awards · 2023–2024</span></li>
+          <li><strong>Certified Developer Professional Diploma</strong><span>iCET · 2024–2025</span></li>
+        </ul>
+      </div>
+      <div class="edu-col reveal">
+        <h3 class="edu-col__title">Certifications</h3>
+        <ul class="edu-list">
+          <li><strong>Postman API Fundamentals — Student Expert</strong></li>
+          <li><strong>Fundamentals of DevOps</strong></li>
+          <li><strong>Complete Course for JavaScript</strong></li>
+          <li><strong>Complete MySQL Course</strong></li>
+          <li><strong>12-Factor App</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <div class="contact reveal">
+      <span class="section__index">06</span>
+      <h2 class="contact__title">Let's build quality together.</h2>
+      <p class="contact__sub">Open to QA Automation / SDET roles and AI-driven testing collaborations.</p>
+
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hp"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+        <p class="form-note">This form goes live once deployed to Netlify (submissions land in your dashboard). Or just email me directly below.</p>
+      </form>
+
+      <div class="contact__links">
+        <a href="mailto:kavindu4543@gmail.com" class="btn btn--primary">✉ kavindu4543@gmail.com</a>
+        <a href="https://www.linkedin.com/in/kavindu-dilshan-475297287/" target="_blank" rel="noopener" class="btn btn--ghost">in · LinkedIn</a>
+        <a href="https://github.com/Kavindu-Dilshan-Dev" target="_blank" rel="noopener" class="btn btn--ghost">⌥ GitHub</a>
+      </div>
+      <p class="contact__phone">📞 +94 70 196 1081</p>
+    </div>
+    <footer class="footer">
+      <p>© <span id="year"></span> Kavindu Dilshan · Built with Three.js &amp; a lot of curiosity.</p>
+    </footer>
+  </section>
+
+</main>
+
+<script type="module" src="js/scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

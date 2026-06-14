@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bug Hunt 🐛 · Kavindu Dilshan</title>
+<meta name="description" content="A 3D Bug Hunt mini-game — squash the bugs, spare the passing tests. A playful way to explore Software QA." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070b16'/><text x='50' y='70' font-size='60' text-anchor='middle'>🐛</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+</head>
+<body class="game-body">
+
+<canvas id="gameCanvas"></canvas>
+<div class="game-flash" id="flash"></div>
+
+<header class="nav scrolled" id="nav">
+  <a href="index.html" class="nav__logo">KD<span>.</span></a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">← Portfolio</a>
+    <a href="index.html#projects">Projects</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </nav>
+</header>
+
+<!-- HUD -->
+<div class="game-hud" id="hud" aria-hidden="true">
+  <div class="hud-pill">🐞 Fixed: <b id="hudFixed">0</b></div>
+  <div class="hud-pill">⭐ Score: <b id="hudScore">0</b></div>
+  <div class="hud-pill">⏱ <b id="hudTime">30</b>s</div>
+</div>
+<div class="game-legend" id="legend" aria-hidden="true">
+  🔴 Bug — <b>click to fix</b> &nbsp;·&nbsp; 🟢 Passing test — <b>don't break it!</b>
+</div>
+
+<!-- START overlay -->
+<div class="game-overlay" id="startOverlay">
+  <div class="game-card">
+    <span class="game-emoji">🐛</span>
+    <h1>Bug Hunt</h1>
+    <p class="game-sub">Welcome to QA in 3D. Bugs are floating through the build —
+       click the <b style="color:#ff5a6e">red bugs</b> to fix them, but
+       <b>spare the <span style="color:#34e0a1">green passing tests</span></b>.
+       Clicking a passing test is a false positive (−5). You have <b>30 seconds</b>.</p>
+    <button class="btn btn--primary" id="startBtn">Start Hunting</button>
+    <p class="game-tip">Tip: works with mouse or touch.</p>
+  </div>
+</div>
+
+<!-- END overlay -->
+<div class="game-overlay hidden" id="endOverlay">
+  <div class="game-card">
+    <span class="game-emoji" id="endEmoji">🏆</span>
+    <h1>Time's up!</h1>
+    <p class="game-rank" id="endRank">QA Engineer</p>
+    <div class="game-stats">
+      <div><span id="endFixed">0</span><small>Bugs fixed</small></div>
+      <div><span id="endScore">0</span><small>Score</small></div>
+      <div><span id="endAcc">0%</span><small>Accuracy</small></div>
+    </div>
+    <p class="game-sub" id="endMsg"></p>
+    <div class="game-end-actions">
+      <button class="btn btn--primary" id="againBtn">Play Again</button>
+      <a class="btn btn--ghost" href="index.html#projects">Explore my work →</a>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

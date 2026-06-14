@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Project · Kavindu Dilshan</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070b16'/><text x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%2338bdf8'>KD</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+<div class="bg-overlay"></div>
+
+<header class="nav scrolled" id="nav">
+  <a href="index.html" class="nav__logo">KD<span>.</span></a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html#projects">← All Projects</a>
+    <a href="index.html#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </nav>
+</header>
+
+<main>
+  <article class="detail" id="detail">
+    <!-- populated by js/project.js -->
+    <p class="detail__loading">Loading project…</p>
+  </article>
+  <footer class="footer">
+    <p>© <span id="year"></span> Kavindu Dilshan</p>
+  </footer>
+</main>
+
+<script type="module" src="js/scene.js"></script>
+<script src="js/projects-data.js"></script>
+<script src="js/project.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
